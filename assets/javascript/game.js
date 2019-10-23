@@ -1,13 +1,15 @@
+$(document).ready(function(){
 $(".space-invaders").on("click", function() {
 
     alert("test");
-
+    });
 });
 
+$(document).ready(function(){
 $("#cyan").on("click", function() {
 
     alert("test");
-
+    });
 });
 
 $(document).ready(function() {
