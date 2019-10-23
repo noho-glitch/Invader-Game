@@ -1,0 +1,14 @@
+body {
+    background-image: url("../images/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.space-invaders {
+    height: 50px;
+    width: 50px;
+}
+
+#invaders {
+    text-align: center;
+}
