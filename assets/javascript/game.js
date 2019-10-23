@@ -1,3 +1,5 @@
+var score = 0;
+
 $(document).ready(function(){
 $(".space-invaders").on("click", function() {
 
@@ -16,4 +18,7 @@ $(document).ready(function() {
     var random = Math.floor(Math.random() * 100) + 19;
     $("#targetNumber").text(random);
     console.log(random)
+});
+$(document).ready(function(){
+    $("#score").text(score);
 });
