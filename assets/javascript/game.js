@@ -11,6 +11,36 @@ var green1 = Math.floor(Math.random() * 12) + 1;
 
 $(document).ready(function () {
     $("#score").text(score);
+    $("#winsCount").text(wins);
+    $("#lossesCount").text(losses);
+
+
+    var random = Math.floor(Math.random() * 100) + 19;
+    $("#targetNumber").text(random);
+
+    function checkWin() {
+        if (score === random) {
+            alert("You Win!")
+            wins++;
+            $("#winsCount").text(wins);
+            score = 0;
+            console.log("wins: " + wins);
+            random = Math.floor(Math.random() * 100) + 19;
+
+
+        }
+    
+        else if (score >= random) {
+            losses++;
+            $("#lossesCount").text(losses);
+            score = 0;
+            console.log("losses: " + losses);
+            random = Math.floor(Math.random() * 100) + 19;
+        }
+
+        $("#score").text(score);
+        $("#targetNumber").text(random);
+    }
 
     $("#cyan").on("click", function () {
         // score += increment;
@@ -19,8 +49,7 @@ $(document).ready(function () {
         console.log(cyan1)
         score = score + cyan1
         console.log(score)
-        $("#score").text(score);
-
+        checkWin()
     });
 
     $("#red").on("click", function () {
@@ -29,8 +58,7 @@ $(document).ready(function () {
         console.log("Red")
         console.log(red1)
         score += red1;
-        $("#score").text(score);
-
+        checkWin();
     });
 
     $("#purple").on("click", function () {
@@ -39,7 +67,7 @@ $(document).ready(function () {
         console.log("purple")
         console.log(purple1)
         score += purple1;
-        $("#score").text(score);
+        checkWin();
 
     });
 
@@ -49,23 +77,14 @@ $(document).ready(function () {
         console.log("green")
         console.log(green1)
         score += green1;
-        $("#score").text(score);
+        
+        checkWin();
+        
     });
 
+   
 
-    var random = Math.floor(Math.random() * 100) + 19;
-    $("#targetNumber").text(random);
-
-    if (score === random) {
-        alert("You Win!")
-        wins++;
-        console.log("wins: " + wins);
-    }
-
-    else if (score >= random) {
-        losses++;
-        console.log("losses: " + losses);
-    }
+   
 
 
 });

@@ -1,7 +1,8 @@
-body {
+.bgImage {
     background-image: url("../images/background.gif");
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 500px;
 }
 
 .space-invaders {
@@ -19,6 +20,10 @@ h1{
     font-size: 24px;
 }
 
-/* #targetNumber {
-    text-align: left;
-} */
+footer {
+    background-color: black;
+    color: yellow;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif	
+    ;
+}
