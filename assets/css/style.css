@@ -1,8 +1,8 @@
 .bgImage {
     background-image: url("../images/background.gif");
     background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 500px;
+    /* background-repeat: no-repeat; */
+    min-height: 800px;
 }
 
 .space-invaders {
